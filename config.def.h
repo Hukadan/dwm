@@ -9,8 +9,8 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "UbuntuMono Nerd Font:size=14" };
+static const char dmenufont[]       = "UbuntuMono Nerd Font:size=14";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -42,9 +42,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "\ue621\ue23c",      tile },    /* first entry is default */
+	{ "\ue621\ufb3f",      NULL },    /* no layout function means floating behavior */
+	{ "\ue621▣",      monocle },
 };
 
 /* key definitions */
@@ -82,21 +82,21 @@ static Key keys[] = {
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
-	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+	{ MODKEY,                       XK_agrave, view,           {.ui = ~0 } },
+	{ MODKEY|ShiftMask,             XK_agrave, tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	TAGKEYS(                        XK_1,                      0)
-	TAGKEYS(                        XK_2,                      1)
-	TAGKEYS(                        XK_3,                      2)
-	TAGKEYS(                        XK_4,                      3)
-	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
+	TAGKEYS(                        XK_ampersand,              0)
+	TAGKEYS(                        XK_eacute,                 1)
+	TAGKEYS(                        XK_quotedbl,               2)
+	TAGKEYS(                        XK_apostrophe,             3)
+	TAGKEYS(                        XK_parenleft,              4)
+	TAGKEYS(                        XK_minus,                  5)
+	TAGKEYS(                        XK_egrave,                 6)
+	TAGKEYS(                        XK_underscore,             7)
+	TAGKEYS(                        XK_ccedilla,               8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
